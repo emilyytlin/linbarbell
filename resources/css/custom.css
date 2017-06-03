@@ -8,9 +8,43 @@ label {
 }
 
 td, th {
-  padding: 3px 3px;
+  padding: 2px 2px;
 }
 
 .container {
   width: 100%;
+  max-width: 1028px;
+}
+
+.text-center {
+  text-align:center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(12,13,14,0.86);
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  color: #c5c9ce;
+}
+
+.navbar li a:hover:not(.active) {
+  color: #fff;
+  background-color: #000;
+}
+
+.active {
+  background-color: #33C3F0;
+  color: #fff !important;
 }

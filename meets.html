@@ -1,5 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="resources/css/custom.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
@@ -8,15 +9,21 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon"/>
-    <title>Lin Barbell</title>
+    <title>Powerlifting | Lin Barbell</title>
   </head>
   <body>
     <div class="container">
-      <h2>Powerlifting meets</h2>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="meets.html">Powerlifting</a></li>
+        </ul>
+      </div>
+      <h3>Powerlifting meet results</h3>
       <canvas id="wilks" width="400" height="200"></canvas>
       <div class="row">
         <label class="radio">
-          <input type="radio" name="unit" value="kg" data-bind="checked: unit">kg
+          <input type="radio" name="unit" value="kg" data-bind="checked: unit"> kg
         </label>&nbsp;&nbsp;
         <label class="radio">
           <input type="radio" name="unit" value="lb" data-bind="checked: unit"> lb
@@ -25,16 +32,16 @@
       <table class="u-full-width">
         <thead>
           <tr>
-            <!-- ko foreach: headers -->
+            <!-- ko foreach: tableHeaders -->
               <th data-bind="text: $data"></th>
             <!-- /ko -->
           </tr>
         </thead>
-        <tbody data-bind="foreach: data">
+        <tbody data-bind="foreach: results">
           <tr>
             <td data-bind="text: Date"/>
-            <td data-bind="text: Name"/>
             <td data-bind="text: Federation"/>
+            <td data-bind="text: Name"/>
             <td data-bind="text: Weight"/>
             <td data-bind="text: Squat1, style: { color: Squat1 < 0 ? 'red' : 'black' }"/>
             <td data-bind="text: Squat2, style: { color: Squat2 < 0 ? 'red' : 'black' }"/>
