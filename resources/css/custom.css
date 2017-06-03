@@ -1,0 +1,16 @@
+.radio, input[type='checkbox'], input[type='radio'] {
+  cursor: pointer;
+}
+
+label {
+  display: initial; 
+  font-weight: initial;
+}
+
+td, th {
+  padding: 3px 3px;
+}
+
+.container {
+  width: 100%;
+}

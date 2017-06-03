@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="resources/css/custom.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon"/>
+    <title>Lin Barbell</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Powerlifting meets</h2>
+      <canvas id="wilks" width="400" height="200"></canvas>
+      <div class="row">
+        <label class="radio">
+          <input type="radio" name="unit" value="kg" data-bind="checked: unit">kg
+        </label>&nbsp;&nbsp;
+        <label class="radio">
+          <input type="radio" name="unit" value="lb" data-bind="checked: unit"> lb
+        </label>
+      </div>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <!-- ko foreach: headers -->
+              <th data-bind="text: $data"></th>
+            <!-- /ko -->
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: data">
+          <tr>
+            <td data-bind="text: Date"/>
+            <td data-bind="text: Name"/>
+            <td data-bind="text: Federation"/>
+            <td data-bind="text: Weight"/>
+            <td data-bind="text: Squat1, style: { color: Squat1 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Squat2, style: { color: Squat2 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Squat3, style: { color: Squat3 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Bench1, style: { color: Bench1 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Bench2, style: { color: Bench2 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Bench3, style: { color: Bench3 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Deadlift1, style: { color: Deadlift1 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Deadlift2, style: { color: Deadlift2 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Deadlift3, style: { color: Deadlift3 < 0 ? 'red' : 'black' }"/>
+            <td data-bind="text: Total, style: { 'font-weight': 'bold' }"/>
+            <td data-bind="text: Wilks, style: { 'font-weight': 'bold' }"/>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="meets.js"></script>
+  </body>
+</html>
