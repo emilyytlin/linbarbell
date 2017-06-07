@@ -50,3 +50,9 @@ td, th {
   background-color: #33C3F0;
   color: #fff !important;
 }
+
+@media only screen and (max-device-width: 550px) {
+  .navbar li a {
+    font-size:26;
+  }
+}
