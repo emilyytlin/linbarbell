@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="resources/css/custom.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <meta name="author" content="Emily Lin">
+    <meta name="description" content="Wilks calculator">
+    <meta name="keywords" content="emily lin, lin barbell, wilks, powerlifting, emily, lin, barbell">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon"/>
+    <title>Wilks Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="meets.html">Powerlifting</a></li>
+          <li><a class="active" href="wilks.html">Wilks</a></li>
+        </ul>
+      </div>
+      <form>
+        <div class="row">
+          <label class="radio">
+            <input type="radio" name="unit" value="kg" data-bind="checked: wilks.unit"> kg
+          </label>&nbsp;&nbsp;
+          <label class="radio">
+            <input type="radio" name="unit" value="lb" data-bind="checked: wilks.unit"> lb
+          </label>
+        </div>
+        <div class="row">
+          <label class="radio">
+            <input type="radio" name="sex" value="F" data-bind="checked: wilks.sex"> F
+          </label>&nbsp;&nbsp;
+          <label class="radio">
+            <input type="radio" name="sex" value="M" data-bind="checked: wilks.sex"> M
+          </label>
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <input class="u-full-width" type="number" placeholder="bodyweight" data-bind="value: wilks.bw">
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <input class="u-full-width" type="number" placeholder="total" data-bind="value: wilks.total">
+          </div>
+        </div>
+        <div class="row">
+          <input class="button-primary" type="submit" value="Calculate" data-bind="click: calculate">
+        </div>
+      </form>
+      <div data-bind="if: results().length > 0">
+        Results
+        <ul data-bind="foreach: results">
+          <li>
+            (<span data-bind="text: sex"></span>) <span data-bind="text: total"></span> @ <span data-bind="text: bw"></span> = <b><span data-bind="text: wilks"></span></b>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="wilks.js"></script>
+  </body>
+</html>

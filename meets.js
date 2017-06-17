@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  var ViewModel = function() {
+  var MeetsViewModel = function() {
     var self = this;
     this.kglb = 2.2046226218;
     this.tableHeaders = ['Date', 'Federation', 'Name', 'Weight', 'Squat', '', '', 'Bench', '', '', 'Deadlift', '', '', 'Total', 'Wilks'];
@@ -21,7 +21,7 @@
     });
   };
 
-  ViewModel.prototype.parseResults = function() {
+  MeetsViewModel.prototype.parseResults = function() {
     var self = this;
     var sKgs = [], bKgs = [], dKgs = [], totalKgs = [], sLbs = [], bLbs = [], dLbs = [], totalLbs = [], wilks = [];
     var pushData = function(kgs, lbs, kg) {
@@ -34,7 +34,7 @@
     };
     var round = function(value, decimals) {
       return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
-    }
+    };
     this.resultsKg().forEach(function(result) {
       self.labels.push(result.Date);
       pushData(sKgs, sLbs, Math.max(result.Squat1, result.Squat2, result.Squat3));
@@ -46,7 +46,7 @@
         Date: result.Date,
         Federation: result.Federation,
         Name: result.Name,
-        Weight: (result.Weight * self.kglb, 1),
+        Weight: round(result.Weight * self.kglb, 1),
         Squat1: round(result.Squat1 * self.kglb, 1),
         Squat2: round(result.Squat2 * self.kglb, 1),
         Squat3: round(result.Squat3 * self.kglb, 1),
@@ -67,7 +67,7 @@
     pushDatasets('wilks', 'line', 'Wilks', wilks, wilks, '#35A7FF');
   };
 
-  ViewModel.prototype.drawChart = function() {
+  MeetsViewModel.prototype.drawChart = function() {
     var self = this;
     if (this.wilksChart) this.wilksChart.destroy();
     var ctx = document.getElementById('wilks');
@@ -91,5 +91,5 @@
       }
     });
   };
-  ko.applyBindings(new ViewModel());
+  ko.applyBindings(new MeetsViewModel());
 })(this);
