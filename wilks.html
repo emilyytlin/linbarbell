@@ -1,8 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <link rel="stylesheet" href="resources/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="resources/css/custom.css?id=1">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <meta name="author" content="Emily Lin">
     <meta name="description" content="Wilks calculator">
@@ -44,7 +44,26 @@
         </div>
         <div class="row">
           <div class="six columns">
+            <hr/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns">
             <input class="u-full-width" type="number" placeholder="total" data-bind="value: wilks.total">
+          </div>
+        </div>
+        <div class="row">
+          or
+        </div>
+        <div class="row">
+          <div class="two columns">
+            <input class="u-full-width" type="number" placeholder="squat" data-bind="value: wilks.squat">
+          </div>
+          <div class="two columns">
+            <input class="u-full-width" type="number" placeholder="bench" data-bind="value: wilks.bench">
+          </div>
+          <div class="two columns">
+            <input class="u-full-width" type="number" placeholder="deadlift" data-bind="value: wilks.deadlift">
           </div>
         </div>
         <div class="row">
@@ -54,11 +73,7 @@
       <div data-bind="if: results().length > 0">
         Results
         <ul data-bind="foreach: results">
-          <li>
-            (<span data-bind="text: sex"></span>)
-            <span data-bind="text: total"></span> <span data-bind="text: unit"></span> @ 
-            <span data-bind="text: bw"></span> <span data-bind="text: unit"></span> = 
-            <b><span data-bind="text: wilks"></span></b>
+          <li><span data-bind="text: prettyInput"></span> = <b><span data-bind="text: wilks"></span></b>
           </li>
         </ul>
       </div>

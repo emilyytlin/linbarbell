@@ -19,6 +19,15 @@ td, th {
   text-align:center;
 }
 
+.row {
+  margin-bottom: 6px;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .resize {
   max-width: 30%;
   max-height: 30%;
