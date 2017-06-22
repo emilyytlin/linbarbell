@@ -2,11 +2,12 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="resources/css/custom.css?id=1">
+    <link rel="stylesheet" href="resources/css/custom.css?id=1.1">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Emily Lin">
     <meta name="description" content="Wilks calculator">
-    <meta name="keywords" content="emily lin, lin barbell, wilks, powerlifting, emily, lin, barbell">
+    <meta name="keywords" content="emily lin, lin barbell, wilks, wilks calculator, powerlifting, emily, lin, barbell">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon"/>
     <title>Wilks Calculator</title>
@@ -23,18 +24,18 @@
       <form>
         <div class="row">
           <label class="radio">
-            <input type="radio" name="unit" value="kg" data-bind="checked: wilks.unit"> kg
+            <input type="radio" name="unit" value="kg" data-bind="checked: wilks.unit"><span class="label-body">kg</span>
           </label>&nbsp;&nbsp;
           <label class="radio">
-            <input type="radio" name="unit" value="lb" data-bind="checked: wilks.unit"> lb
+            <input type="radio" name="unit" value="lb" data-bind="checked: wilks.unit"><span class="label-body">lb</span>
           </label>
         </div>
         <div class="row">
           <label class="radio">
-            <input type="radio" name="sex" value="F" data-bind="checked: wilks.sex"> F
+            <input type="radio" name="sex" value="F" data-bind="checked: wilks.sex"><span class="label-body">F</span>
           </label>&nbsp;&nbsp;
           <label class="radio">
-            <input type="radio" name="sex" value="M" data-bind="checked: wilks.sex"> M
+            <input type="radio" name="sex" value="M" data-bind="checked: wilks.sex"><span class="label-body">M</span>
           </label>
         </div>
         <div class="row">

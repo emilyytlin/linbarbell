@@ -2,6 +2,7 @@
   cursor: pointer;
   font-size: 1.2em;
 }
+
 label {
   display: initial; 
   font-weight: initial;
@@ -9,10 +10,6 @@ label {
 
 td, th {
   padding: 2px 2px;
-}
-
-.container {
-  width: 100%;
 }
 
 .text-center {
@@ -59,10 +56,4 @@ hr {
 .active {
   background-color: #33C3F0;
   color: #fff !important;
-}
-
-@media only screen and (max-device-width: 550px) {
-  .navbar li a {
-    font-size: 26;
-  }
 }

@@ -2,11 +2,12 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="resources/css/custom.css">
+    <link rel="stylesheet" href="resources/css/custom.css?id=1.1">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Emily Lin">
     <meta name="description" content="Emily Lin powerlifting meet results">
     <meta name="keywords" content="emily lin, lin barbell, powerlifting, emily, lin, barbell">
@@ -27,10 +28,10 @@
       <canvas id="wilks" width="400" height="200"></canvas>
       <div class="row">
         <label class="radio">
-          <input type="radio" name="unit" value="kg" data-bind="checked: unit"> kg
+          <input type="radio" name="unit" value="kg" data-bind="checked: unit"><span class="label-body">kg</span>
         </label>&nbsp;&nbsp;
         <label class="radio">
-          <input type="radio" name="unit" value="lb" data-bind="checked: unit"> lb
+          <input type="radio" name="unit" value="lb" data-bind="checked: unit"><span class="label-body">lb</span>
         </label>
       </div>
       <table class="u-full-width">
