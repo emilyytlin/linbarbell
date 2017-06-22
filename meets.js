@@ -85,6 +85,8 @@
             { stacked: true, id: 'wilks', position: 'right', scaleLabel: { display: true, labelString: 'wilks' } }
           ]
         },
+        responsive: true,
+        maintainAspectRatio: false,
         hover: { animationDuration: 0 },
         animation: { duration: 0 },
         responsiveAnimationDuration: 0
