@@ -40,6 +40,7 @@ hr {
 
 .navbar li {
   float: left;
+  margin-bottom: 1rem;
 }
 
 .navbar li a {
@@ -56,4 +57,20 @@ hr {
 .active {
   background-color: #33C3F0;
   color: #fff !important;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+body {
+  line-height: 1.5em;
+}
+
+ul {
+  margin-bottom: .5em;
 }
