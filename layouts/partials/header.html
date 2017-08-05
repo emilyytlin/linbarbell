@@ -16,12 +16,12 @@
   </head>
   <body>
     <div class="container">
-      <div class="navbar">
+      <nav class="navbar">
         <ul>
           {{- $type := .Type -}}
           {{- $currentPage := . -}}
-          {{- range sort .Site.Menus.main -}}
-            <li><a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}{{ if eq $type .URL }}active{{end}}">{{ .Name }}</a></li>
-          {{- end -}}
+          {{- range sort .Site.Menus.main }}
+          <li><a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}{{ if eq $type .URL }}active{{end}}">{{ .Name }}</a></li>
+          {{- end }}
         </ul>
-      </div>
+      </nav>
