@@ -1,4 +1,5 @@
 ---
 title: "Powerlifting meet results"
-type: "/meets/"
+type: "html"
+layout: "meets"
 ---

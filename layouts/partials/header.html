@@ -18,10 +18,10 @@
     <div class="container">
       <nav class="navbar">
         <ul>
-          {{- $type := .Type -}}
+          {{- $layout := .Layout -}}
           {{- $currentPage := . -}}
           {{- range sort .Site.Menus.main }}
-          <li><a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}{{ if eq $type .URL }}active{{end}}">{{ .Name }}</a></li>
+          <li><a href="{{ .URL }}" class="{{ if or ($currentPage.IsMenuCurrent "main" .) (eq $layout .Identifier) }}active{{end}}">{{ .Name }}</a></li>
           {{- end }}
         </ul>
       </nav>

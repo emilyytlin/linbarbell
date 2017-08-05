@@ -1,4 +1,5 @@
 ---
 title: "Wilks Calculator"
-type: "/wilks/"
+type: "html"
+layout: "wilks"
 ---
