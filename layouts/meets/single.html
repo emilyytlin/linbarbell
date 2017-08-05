@@ -1,0 +1,39 @@
+{{ partial "header" . }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.min.js"></script>
+<h4>{{ .Title }}</h4>
+<div style="height: 400px; width: content-box;"><canvas id="wilks"></canvas></div>
+<div class="row">
+  <label class="radio">
+    <input type="radio" name="unit" value="kg" data-bind="checked: unit"><span class="label-body">kg</span>
+  </label>&nbsp;&nbsp;
+  <label class="radio">
+    <input type="radio" name="unit" value="lb" data-bind="checked: unit"><span class="label-body">lb</span>
+  </label>
+</div>
+<table class="u-full-width">
+  <thead><tr><th>Date</th><th>Federation</th><th>Name</th><th>Weight</th><th>Squat</th><th></th><th></th><th>Bench</th><th></th><th></th><th>Deadlift</th><th></th><th></th><th>Total</th><th>Wilks</th></tr></thead>
+  <tbody data-bind="foreach: results">
+    <tr>
+      <td><a data-bind="attr: { href: Link }, text: Date"></a></td>
+      <td data-bind="text: Federation"/>
+      <td data-bind="text: Name"/>
+      <td data-bind="text: Weight"/>
+      <td data-bind="text: Squat1, style: { color: Squat1 < 0 ? 'red' : 'black', fontWeight: Squat1 == Math.max(Squat1, Squat2, Squat3) ? 600 : 500 }"/>
+      <td data-bind="text: Squat2, style: { color: Squat2 < 0 ? 'red' : 'black', fontWeight: Squat2 == Math.max(Squat1, Squat2, Squat3) ? 600 : 500 }"/>
+      <td data-bind="text: Squat3, style: { color: Squat3 < 0 ? 'red' : 'black', fontWeight: Squat3 == Math.max(Squat1, Squat2, Squat3) ? 600 : 500 }"/>
+      <td data-bind="text: Bench1, style: { color: Bench1 < 0 ? 'red' : 'black', fontWeight: Bench1 == Math.max(Bench1, Bench2, Bench3) ? 600 : 500 }"/>
+      <td data-bind="text: Bench2, style: { color: Bench2 < 0 ? 'red' : 'black', fontWeight: Bench2 == Math.max(Bench1, Bench2, Bench3) ? 600 : 500 }"/>
+      <td data-bind="text: Bench3, style: { color: Bench3 < 0 ? 'red' : 'black' , fontWeight: Bench3 == Math.max(Bench1, Bench2, Bench3) ? 600 : 500 }"/>
+      <td data-bind="text: Deadlift1, style: { color: Deadlift1 < 0 ? 'red' : 'black', fontWeight: Deadlift1 == Math.max(Deadlift1, Deadlift2, Deadlift3) ? 600 : 500  }"/>
+      <td data-bind="text: Deadlift2, style: { color: Deadlift2 < 0 ? 'red' : 'black', fontWeight: Deadlift2 == Math.max(Deadlift1, Deadlift2, Deadlift3) ? 600 : 500  }"/>
+      <td data-bind="text: Deadlift3, style: { color: Deadlift3 < 0 ? 'red' : 'black', fontWeight: Deadlift3 == Math.max(Deadlift1, Deadlift2, Deadlift3) ? 600 : 500  }"/>
+      <td data-bind="text: Total, style: { 'font-weight': 'bold' }"/>
+      <td data-bind="text: Wilks"/>
+    </tr>
+  </tbody>
+</table>
+<script type="text/javascript" src="../js/meets.js"></script>
+{{ partial "footer.html" . }}

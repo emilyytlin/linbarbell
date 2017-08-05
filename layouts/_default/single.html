@@ -1,0 +1,7 @@
+{{ partial "header" . }}
+<main>
+  <h4>{{ .Title }}</h4>
+  {{ partial "datetags" . }}
+  {{ .Content }}
+</main>
+{{ partial "footer.html" . }}

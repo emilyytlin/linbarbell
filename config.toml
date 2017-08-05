@@ -1,0 +1,27 @@
+baseURL = "http://linbarbell.com/"
+languageCode = "en-us"
+title = "Lin Barbell"
+
+[params]
+    author = "Emily Lin"
+    description = "Emily Lin"
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/meets/"
+    name = "Powerlifting"
+    weight = 2
+
+[[menu.main]]
+    url = "/posts/"
+    name = "Posts"
+    weight = 3
+
+[[menu.main]]
+    url = "/wilks/"
+    name = "Wilks"
+    weight = 4

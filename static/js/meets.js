@@ -3,7 +3,6 @@
   var MeetsViewModel = function() {
     var self = this;
     this.kglb = 2.2046226218;
-    this.tableHeaders = ['Date', 'Federation', 'Name', 'Weight', 'Squat', '', '', 'Bench', '', '', 'Deadlift', '', '', 'Total', 'Wilks'];
     this.unit = ko.observable('kg');
     this.resultsKg = ko.observableArray([]);
     this.resultsLb = ko.observableArray([]);
@@ -11,7 +10,7 @@
     this.labels = [];
     this.datasetsKg = [];
     this.datasetsLb = [];
-    $.get('resources/meets.csv').done(function(meets) {
+    $.get('../meets.csv').done(function(meets) {
       self.resultsKg($.csv.toObjects(meets));
       self.parseResults();
       self.drawChart();
