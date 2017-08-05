@@ -42,6 +42,7 @@
       pushData(totalKgs, totalLbs, result.Total);
       wilks.push(result.Wilks);
       self.resultsLb.push({
+        Link: result.Link,
         Date: result.Date,
         Federation: result.Federation,
         Name: result.Name,
