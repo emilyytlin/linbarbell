@@ -24,6 +24,7 @@
   var WilksViewModel = function() {
     this.wilks = new Wilks('kg', 'F');
     this.results = ko.observableArray();
+    this.showInfo = ko.observable(false);
   };
 
   var round = function(value, decimals) {
