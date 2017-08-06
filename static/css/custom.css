@@ -1,12 +1,8 @@
-body {
-  line-height: 1.5em;
-}
-
 p {
   margin-bottom: 1rem;
 }
 
-ul {
+ul, ol {
   margin-bottom: .5em;
 }
 
@@ -29,8 +25,7 @@ a {
 }
 
 label {
-  display: initial; 
-  font-weight: initial;
+  display: initial;
 }
 
 td, th {
@@ -48,11 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .row {
   margin-bottom: 6px;
-}
-
-.resize {
-  max-width: 40%;
-  max-height: 40%;
 }
 
 .item-tag {
