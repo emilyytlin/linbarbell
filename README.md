@@ -1,11 +1,13 @@
 # [Lin Barbell](http://linbarbell.com)
 
-[Hugo](https://gohugo.com)
-
-Run locally
+Run locally ([Hugo](https://gohugo.io))
 
     hugo server
 
-Deploy
+In case you delete or mess up /public
 
-    ./deploy.ps1
+    ./setup
+
+Deploy to [public website repo](https://github.com/emilyytlin/emilyytlin.github.io)
+
+    ./deploy
