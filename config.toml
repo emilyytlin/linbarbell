@@ -1,6 +1,7 @@
 baseURL = "http://linbarbell.com/"
 languageCode = "en-us"
 title = "Lin Barbell"
+disqusShortname = "linbarbell"
 
 [params]
     author = "Emily Lin"

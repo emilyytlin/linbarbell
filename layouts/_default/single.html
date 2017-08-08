@@ -4,4 +4,5 @@
 {{ range .Params.tags }}<a class="item-tag" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
 <br><br>
 {{ .Content }}
+{{ template "_internal/disqus.html" . }}
 {{ partial "footer.html" . }}
