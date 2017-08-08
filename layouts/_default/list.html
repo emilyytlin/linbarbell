@@ -1,23 +1,12 @@
 {{ partial "header" . }}
-<main>
-  <h4>{{ .Title }}</h4>
-  {{ range (.Paginator).Pages }}
-    <h5><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
-    {{- partial "datetags" . -}}
-  {{ end }}
-  {{ if or .Paginator.HasPrev .Paginator.HasNext }}
-  <div class="pagination">
-    {{ if .Paginator.HasPrev }}
-      <a href="{{ .Paginator.Prev.URL }}" rel="prev" class="page button">
-        <i class="fa fa-angle-left"></i> Previous
-      </a>
-    {{ end }}
-    {{ if .Paginator.HasNext }}
-      <a href="{{ .Paginator.Next.URL }}" rel="next" class="page right button">
-        Next <i class="fa fa-angle-right"></i>
-      </a>
-    {{ end }}
-  </div>
-{{ end }}
-</main>
+<h4>{{ .Title }}</h4>
+<ul>
+  {{- range (where .Data.Pages "Section" "!=" "") }}
+  <li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .URL }}">{{ .Title }}</a>
+    {{ range .Params.tags }}<a class="item-tag" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
+  </li>
+  {{- end }}
+</ul>
 {{ partial "footer" . }}

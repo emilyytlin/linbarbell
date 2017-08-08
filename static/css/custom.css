@@ -211,15 +211,15 @@ ol, ul {
 code {
   padding: .2rem .5rem;
   white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
   border-radius: 4px;
   font-family: monospace,monospace;
 }
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
-  white-space: pre; }
+  white-space: pre;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1; }
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -247,6 +247,7 @@ hr {
 .right { float: right; }
 .text-center { text-align:center; }
 .row { margin-bottom: 6px; }
+.sekrit { display: none; }
 
 .item-tag {
   background-color: #33C3F0;
