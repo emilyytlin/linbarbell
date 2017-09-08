@@ -4,10 +4,8 @@ Run locally ([Hugo](https://gohugo.io))
 
     hugo server
 
-In case you delete or mess up /public
+Regen /docs
 
-    ./setup
+    hugo
 
-Deploy to [public website repo](https://github.com/emilyytlin/emilyytlin.github.io)
-
-    ./deploy
+/docs is deployed when you commit to master
