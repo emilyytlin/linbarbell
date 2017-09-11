@@ -2,7 +2,6 @@ baseURL = "http://linbarbell.com/"
 languageCode = "en-us"
 title = "Lin Barbell"
 disqusShortname = "linbarbell"
-publishDir = "docs"
 
 [params]
     author = "Emily Lin"
