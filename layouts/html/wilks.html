@@ -45,14 +45,14 @@
     <div style="display: none" data-bind="visible: results().length > 0">
       Results
       <ul data-bind="foreach: results">
-        <li><span data-bind="text: prettyInput"></span> = <b><span data-bind="text: wilks"></span></b>
+        <li><span data-bind="text: prettyInput"></span> = <span data-bind="text: wilks" style="font-weight:600"></span>
         </li>
       </ul>
     </div>
   </form>
   <div class="six column" style="display: none" data-bind="visible: showInfo">
     <p>The wilks coefficient is used to compare powerlifters of different bodyweights.</p>
-    <img src="../images/wilks.gif" title="Coeff = \frac{500}{a + bx + cx^2 + dx^3 + ex^4 + fx^5 }" />
+    <img src="../images/wilks.gif" title="Coeff = \frac{500}{a + bx + cx^2 + dx^3 + ex^4 + fx^5 }" height="45" width="350" alt="wilks coeff formula" />
     <p>x is the lifter's bodyweight in kg. To get the wilks score, we multiply the weight lifted in kg by the coefficient.</p>
     <div>
       <div class="six column">
@@ -62,6 +62,7 @@
       <div class="six column">
         <p>Values for women:</p>
         <pre><code data-bind="text: displayCoeff(f)"></code></pre>
+      </div>
     </div>
   </div>
 </div>
