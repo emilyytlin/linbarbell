@@ -1,9 +1,11 @@
-# [Lin Barbell](https://linbarbell.com)
+# [Lin Barbell](http://linbarbell.com)
 
 Run locally ([Hugo](https://gohugo.io))
 
     hugo server
 
-Deploy to lin barbell
+Regen /docs
 
-    ./deploy.ps1
+    hugo
+
+/docs is deployed when you commit to master
